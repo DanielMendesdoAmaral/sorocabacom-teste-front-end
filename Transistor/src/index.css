@@ -10,11 +10,11 @@
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-wrap: break-word;
-  word-break: break-all;
+  color: var(--cinza);
+  font-weight: 400;
 }
 
-head {
+html {
   font-size: 62.5%;
 }
 
@@ -28,6 +28,14 @@ head {
 
 .texto-branco {
   color: white;
+}
+
+.maiusculo {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .bg-dark {

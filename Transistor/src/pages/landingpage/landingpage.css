@@ -17,5 +17,56 @@ header img {
 }
 
 header h1 {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    word-break: break-all;
+}
+
+
+
+
+
+/*Principal*/
+
+/*Banner*/
+
+main section.banner {
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    background: url(../../assets/Background/Background.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    display: flex;
+    justify-content: center;
+}
+
+main section.banner .container-img-card1 {
+    width: auto;
+    height: 100%;
+    background: url("../../assets/Card 1/Background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+main section.banner .container-img-card1 h1 {
+    font-size: .9rem;
+    overflow-wrap: break-word;
+    padding: 10px 20px;
+}
+
+main section.banner .container-img-card1 img {
+    width: 80%;
+    max-width: 340px;
+    display: block;
+    margin: auto;
+}
+
+main section.banner .container-img-card1 p {
+    color: #F0F0F2;
+    text-align: center;
+    padding: 20px 0;
 }
