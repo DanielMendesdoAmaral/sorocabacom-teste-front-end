@@ -6,11 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 //Páginas
-import Landpage from './pages/landpage/landpage';
+import LandingPage from './pages/landingpage/landingpage';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Landpage/>
+    <LandingPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );

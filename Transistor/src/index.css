@@ -7,8 +7,29 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
+head {
+  font-size: 62.5%;
+}
+
+:root {
+  --cinza: #363636;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.texto-branco {
+  color: white;
+}
+
+.bg-dark {
+  background-color: var(--cinza);
+}

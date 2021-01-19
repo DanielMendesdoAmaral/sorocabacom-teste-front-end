@@ -1,0 +1,21 @@
+/*Cabeçalho*/
+
+header {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header img {
+    height: 15vh;
+    max-height: 80px;
+    min-height: 65px;
+}
+
+header h1 {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
