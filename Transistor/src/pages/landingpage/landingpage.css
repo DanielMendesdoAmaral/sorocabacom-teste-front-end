@@ -76,7 +76,7 @@ main section.banner .container-img-card1 p {
 section.gradient {
     width: 100%;
     height: 50vh;
-    min-height: 470px;
+    min-height: 500px;
     background: rgb(125,237,226);
     background: linear-gradient(90deg, rgba(125,237,226,1) 0%, rgba(88,183,144,1) 100%);
 }
@@ -84,7 +84,7 @@ section.gradient {
 section.gradient div.formulario {
     width: 80%;
     max-width: 600px;
-    height: 100%;
+    height: 110%;
     background-color: white;
     margin: auto;
     border-radius: 10px;
@@ -111,13 +111,18 @@ section.gradient div form {
     margin: auto;
 }
 
-section.gradient div form textarea {
+section.gradient div form .dados input {
     width: 100%;
+    min-width: 120px;
 }
 
-section.gradient div form input {
+section.gradient div form .dados div {
     width: 40%;
-    min-width: 130px;
+    min-width: 120px;
+}
+
+section.gradient div form textarea {
+    width: 100%;
 }
 
 section.gradient input, textarea {
@@ -143,7 +148,7 @@ section.gradient div form button {
 }
 
 @media screen and (max-width: 598px) {
-    section.gradient div form input {
+    section.gradient div form .dados div {
         width: 100%;
         margin-bottom: 20px;
     }

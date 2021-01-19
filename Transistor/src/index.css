@@ -57,3 +57,7 @@ html {
 input, button, textarea {
   outline: none;
 }
+
+.erro {
+  color: red;
+}

@@ -25,6 +25,10 @@ const LandingPage = () => {
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
 
+    const [erroNome, setErroNome] = useState("");
+    const [erroEmail, setErroEmail] = useState("");
+    const [erroMsg, setErroMsg] = useState("");
+
     const enviar = (event) => {
         event.preventDefault();
         setNome("");
@@ -33,9 +37,29 @@ const LandingPage = () => {
         alert("Mensagem enviada com sucesso! :)");
     }   
 
-    const validarNome = (event) => {
+    const validarNome = (nome) => {
+        nome = nome.trim();
+        if(nome.length<2)
+            setErroNome("Nome muito curto (mín 2 caracateres).");
+        else 
+            setErroNome("");
+    }
 
-    }   
+    const validarEmail = (email) => {
+        email = email.trim();
+        if(!email.includes("@")||!email.includes(".com"))
+            setErroEmail("Email inválido.");
+        else
+            setErroEmail("");
+    }
+
+    const validarMsg = (msg) => {
+        msg = msg.trim();
+        if(msg.length<5)
+            setErroMsg("Mensagem muito curta (mín 5 caracteres).");
+        else 
+            setErroMsg("");
+    }
 
     return (
         <>
@@ -65,11 +89,18 @@ const LandingPage = () => {
                             </div>
                             <form>
                                 <div className="dados">
-                                    <input type="text" placeholder="Nome" required value={nome} onChange={event => setNome(event.target.value)} onBlur={event => validarNome(event)}></input>
-                                    <input type="email" placeholder="Email" required value={email} onChange={event => setEmail(event.target.value)}></input>
+                                    <div>
+                                        <input type="text" placeholder="Nome" required value={nome} onChange={event => setNome(event.target.value)} onKeyUp={event => validarNome(event.target.value)} style={{borderColor: erroNome!=""?"red":"#363636"}}></input>
+                                        <p className="erro">{erroNome}</p>
+                                    </div>
+                                    <div>
+                                        <input type="email" placeholder="Email" required value={email} onChange={event => setEmail(event.target.value)} onKeyUp={event=>validarEmail(event.target.value)} style={{borderColor: erroEmail!=""?"red":"#363636"}}></input>
+                                        <p className="erro">{erroEmail}</p>
+                                    </div>
                                 </div>
-                                <textarea placeholder="Mensagem" rows={5} required value={msg} onChange={event => setMsg(event.target.value)}></textarea>
-                                <button onClick={event => enviar(event)} type="submit" className="texto-branco maiusculo">Enviar</button>
+                                <textarea placeholder="Mensagem" rows={5} required value={msg} style={{borderColor: erroMsg!=""?"red":"#363636"}} onChange={event => setMsg(event.target.value)} onKeyUp={event=>validarMsg(event.target.value)}></textarea>
+                                <p className="erro">{erroMsg}</p>
+                                <button onClick={event => erroMsg!==""||erroEmail!==""||erroNome!==""||nome.length<2||!email.includes("@")||!email.includes(".com")||msg.length<5?alert("Preencha os campos e/ou resolva os erros!"):enviar(event)} type={erroMsg===""||erroEmail===""||erroNome===""?"button":"submit"} className="texto-branco maiusculo" style={{opacity: erroMsg!==""||erroEmail!==""||erroNome!==""||nome.length<2||!email.includes("@")||!email.includes(".com")||msg.length<5? "0.5" : "1"}}>Enviar</button>
                             </form>
                         </div>
                     </div>
