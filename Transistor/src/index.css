@@ -20,6 +20,7 @@ html {
 
 :root {
   --cinza: #363636;
+  --verde: #63C7A9;
 }
 
 .montserrat {
@@ -28,6 +29,10 @@ html {
 
 .texto-branco {
   color: white;
+}
+
+.texto-verde {
+  color: var(--verde);
 }
 
 .maiusculo {
@@ -40,4 +45,15 @@ html {
 
 .bg-dark {
   background-color: var(--cinza);
+}
+
+.container {
+  width: 92.5%;
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+}
+
+input, button, textarea {
+  outline: none;
 }

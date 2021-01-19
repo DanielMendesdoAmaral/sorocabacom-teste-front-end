@@ -1,0 +1,33 @@
+.card {
+    width: 80%;
+    max-width: 250px;
+    height: 350px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 4%;
+}
+
+.card .card-img {
+    width: 85%;
+    height: 70%;
+    margin: auto;
+    background-color: var(--cinza);
+    border: solid 2px white;
+    border-radius: 20%;
+    position: relative;
+    top: -50px;
+}
+
+.card .card-img img {
+    height: 120%;
+    width: 100%;
+    display: block;
+    margin: auto;
+    position: relative;
+    margin-top: -20%;
+}
+
+.card .container-texto {
+    width: 75%;
+    margin: auto;
+}
