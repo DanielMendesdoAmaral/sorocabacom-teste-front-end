@@ -71,6 +71,12 @@ main section.banner .container-img-card1 p {
     padding: 20px 0;
 }
 
+/*Cards personagens*/
+
+.personagens {
+    padding: 50px 0;
+}
+
 /*Formulário*/
 
 section.gradient {
@@ -91,7 +97,7 @@ section.gradient div.formulario {
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 10px;
+    top: -25px;
 }
 
 section.gradient div.container-formulario {
@@ -176,5 +182,12 @@ footer {
 
 footer i {
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+footer i:hover {
+    transition: 0.25s;
+    text-shadow: 0 0 4px white;
 }

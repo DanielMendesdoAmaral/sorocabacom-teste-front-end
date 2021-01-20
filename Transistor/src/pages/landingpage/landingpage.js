@@ -21,9 +21,72 @@ import PenaCaidaRetaEsquerda from "../../assets/Card1-Details/Pena-3.png";
 import PenaCaidaRetaDireita from "../../assets/Card1-Details/Pena-4.png";
 
 //react-scroll
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+
+//react-multi-carousel
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const LandingPage = () => {
+    const responsive = {
+        desktop: {
+            breakpoint: {
+                max: 3000,
+                min: 1025
+            },
+            items: 3
+        },
+        laptop: {
+            breakpoint: {
+                max: 1024,
+                min: 769
+            },
+            items: 2.5
+        },
+        tabletS: {
+            breakpoint: {
+                max: 500,
+                min: 426
+            },
+            items: 1.4
+        },
+        tabletM: {
+            breakpoint: {
+                max: 650,
+                min: 501
+            },
+            items: 1.7
+        },
+        tabletL: {
+            breakpoint: {
+                max: 768,
+                min: 651
+            },
+            items: 2.1
+        },
+        mobileS: {
+            breakpoint: {
+                max: 320,
+                min: 0
+            },
+            items: 1
+        },
+        mobileM: {
+            breakpoint: {
+                max: 375,
+                min: 321
+            },
+            items: 1
+        },
+        mobileL: {
+            breakpoint: {
+                max: 425,
+                min: 376
+            },
+            items: 1.2
+        }
+    }
+
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
@@ -78,11 +141,15 @@ const LandingPage = () => {
                         <p className="">"Olha, o que quer que você<br></br>esteja pensando, me faça<br></br>um favor, não solte."</p>
                     </div>
                 </section>
-                {/*<section className="container carrossel bg-dark">
-                    <Card img={Grant} nomePersonagem="Grant" descricao="A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder um número a ser contado em uma mão."/>
-                    <Card img={Red} nomePersonagem="Red" descricao="Red, uma jovem cantora, entrou em posse do Transistor. Sendo a poderosa espada falante. O grupo Possessores quer tanto ela quanto o Transistor e está perseguindo implacavelmente a sua procura."/>
-                    <Card img={Sybil} nomePersonagem="Sybil" descricao={`Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.`}/>
-                </section>*/}
+                <section className="container personagens bg-dark">
+                    <Carousel minimumTouchDrag={0} responsive={responsive} draggable={false}>  
+                        <Card img={Grant} nomePersonagem="Grant" descricao="A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder um número a ser contado em uma mão."/>
+                        <Card img={Red} nomePersonagem="Red" descricao="Red, uma jovem cantora, entrou em posse do Transistor. Sendo a poderosa espada falante. O grupo Possessores quer tanto ela quanto o Transistor e está perseguindo implacavelmente a sua procura."/>
+                        <Card img={Sybil} nomePersonagem="Sybil" descricao={`Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.`}/>
+                        <Card img={Sybil} nomePersonagem="Sybil" descricao={`Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.`}/>
+                        <Card img={Sybil} nomePersonagem="Sybil" descricao={`Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.`}/>
+                    </Carousel>
+                </section>
                 <section className="gradient">
                     <div className="formulario">
                         <div className="container-formulario">
@@ -93,15 +160,15 @@ const LandingPage = () => {
                             <form>
                                 <div className="dados">
                                     <div>
-                                        <input type="text" placeholder="Nome" required value={nome} onChange={event => setNome(event.target.value)} onKeyUp={event => validarNome(event.target.value)} style={{borderColor: erroNome!=""?"red":"#363636"}}></input>
+                                        <input type="text" placeholder="Nome" required value={nome} onChange={event => setNome(event.target.value)} onKeyUp={event => validarNome(event.target.value)} style={{borderColor: erroNome!==""?"red":"#363636"}}></input>
                                         <p className="erro">{erroNome}</p>
                                     </div>
                                     <div>
-                                        <input type="email" placeholder="Email" required value={email} onChange={event => setEmail(event.target.value)} onKeyUp={event=>validarEmail(event.target.value)} style={{borderColor: erroEmail!=""?"red":"#363636"}}></input>
+                                        <input type="email" placeholder="Email" required value={email} onChange={event => setEmail(event.target.value)} onKeyUp={event=>validarEmail(event.target.value)} style={{borderColor: erroEmail!==""?"red":"#363636"}}></input>
                                         <p className="erro">{erroEmail}</p>
                                     </div>
                                 </div>
-                                <textarea placeholder="Mensagem" rows={5} required value={msg} style={{borderColor: erroMsg!=""?"red":"#363636"}} onChange={event => setMsg(event.target.value)} onKeyUp={event=>validarMsg(event.target.value)}></textarea>
+                                <textarea placeholder="Mensagem" rows={5} required value={msg} style={{borderColor: erroMsg!==""?"red":"#363636"}} onChange={event => setMsg(event.target.value)} onKeyUp={event=>validarMsg(event.target.value)}></textarea>
                                 <p className="erro">{erroMsg}</p>
                                 <button onClick={event => erroMsg!==""||erroEmail!==""||erroNome!==""||nome.length<2||!email.includes("@")||!email.includes(".com")||msg.length<5?alert("Preencha os campos e/ou resolva os erros!"):enviar(event)} type={erroMsg===""||erroEmail===""||erroNome===""?"button":"submit"} className="texto-branco maiusculo" style={{opacity: erroMsg!==""||erroEmail!==""||erroNome!==""||nome.length<2||!email.includes("@")||!email.includes(".com")||msg.length<5? "0.5" : "1"}}>Enviar</button>
                             </form>
