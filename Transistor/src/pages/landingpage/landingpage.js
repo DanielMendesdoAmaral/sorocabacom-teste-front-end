@@ -20,6 +20,9 @@ import PenaCaidaDireita from "../../assets/Card1-Details/Pena-2.png";
 import PenaCaidaRetaEsquerda from "../../assets/Card1-Details/Pena-3.png";
 import PenaCaidaRetaDireita from "../../assets/Card1-Details/Pena-4.png";
 
+//react-scroll
+import { Link, animateScroll as scroll } from "react-scroll";
+
 const LandingPage = () => {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -106,6 +109,9 @@ const LandingPage = () => {
                     </div>
                 </section>
             </main>
+            <footer className="container">
+                <Link to="inicio" smooth={true} duration={500}><i className="fas fa-chevron-circle-up"></i></Link>
+            </footer>
         </>
     );
 }

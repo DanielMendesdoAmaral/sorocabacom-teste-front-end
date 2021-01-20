@@ -90,6 +90,8 @@ section.gradient div.formulario {
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    position: relative;
+    bottom: 10px;
 }
 
 section.gradient div.container-formulario {
@@ -155,4 +157,24 @@ section.gradient div form button {
     section.gradient div form .dados {
         margin-bottom: 0;
     }
+}
+
+
+
+
+
+/*Rodapé*/
+
+footer {
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer i {
+    color: white;
+    font-size: 3rem;
 }
