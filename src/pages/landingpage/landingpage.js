@@ -15,6 +15,9 @@ import Grant from "../../assets/Personagens/Grant/Grant.png";
 import Red from "../../assets/Personagens/Red/Red.png";
 import Sybil from "../../assets/Personagens/Sybil/Sybil_2.png";
 
+import PenaCaidaEsquerda from "../../assets/Card1-Details/Pena-1.png";
+import PenaCaidaDireita from "../../assets/Card1-Details/Pena-2.png";
+
 //react-scroll -> Transição suave entre links internos
 import { Link } from "react-scroll";
 

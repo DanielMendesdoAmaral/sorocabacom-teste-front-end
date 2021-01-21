@@ -1,7 +1,7 @@
 .card {
     width: 80%;
     max-width: 250px;
-    height: 350px;
+    height: 400px;
     margin: 20px;
     background-color: white;
     border-radius: 4%;
@@ -9,7 +9,7 @@
 }
 
 .card .card-img {
-    width: 85%;
+    width: 90%;
     height: 70%;
     margin: auto;
     background-color: var(--cinza);
@@ -25,10 +25,10 @@
     display: block;
     margin: auto;
     position: relative;
-    margin-top: -20%;
+    margin-top: -22%;
 }
 
 .card .container-texto {
-    width: 75%;
+    width: 80%;
     margin: auto;
 }
