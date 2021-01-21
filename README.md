@@ -11,6 +11,7 @@ Para este teste foi desenvolvida uma landing page para o jogo __*Transistor*__, 
 Com estes passos, você instalará todas as dependências necessárias para o projeto funcionar (node_modules) e executará a aplicação num servidor de desenvolvimento, no endereço http://localhost:3000/.
 
 ## ✅ Tempo de conclusão
+### 22:37:28
 ![logo](https://github.com/DanielMendesdoAmaral/sorocabacom-teste-front-end/blob/main/Tempo%20de%20conclus%C3%A3o.png)
 
 ## ✅ Proposta
@@ -24,4 +25,4 @@ Não esqueça da validação do formulário! (Não precisa enviar, apenas valida
 Deve ser responsivo e respeitar o acesso de dispositivos móveis, celulares, tablets, telas widescreen e fullscreen.
 
 ### Prazo
-A partir do dia da entrega deste documento *(18/01/2021, às 10:31)*: 3 dias.  
+A partir do dia da entrega do escopo *(18/01/2021, às 10:31)*: 3 dias.  
