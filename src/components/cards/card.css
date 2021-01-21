@@ -5,7 +5,7 @@
     margin: 20px;
     background-color: white;
     border-radius: 4%;
-    margin: 100px 0;
+    margin: 100px auto;
 }
 
 .card .card-img {
@@ -21,7 +21,6 @@
 
 .card .card-img img {
     height: 120%;
-    max-height: calc(120% / 100%);
     width: 100%;
     display: block;
     margin: auto;

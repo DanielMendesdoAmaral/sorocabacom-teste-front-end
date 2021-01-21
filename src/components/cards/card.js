@@ -10,7 +10,7 @@ const Card = ({img, nomePersonagem, descricao}) => {
                 <img src={img} alt={nomePersonagem} title={nomePersonagem} loading="lazy"></img>
             </div>
             <div className="container-texto">
-                <p>{descricao}</p>
+                <p className="texto-pequeno">{descricao}</p>
             </div>
         </article>
     )

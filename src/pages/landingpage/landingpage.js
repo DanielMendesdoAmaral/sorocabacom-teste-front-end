@@ -15,14 +15,10 @@ import Grant from "../../assets/Personagens/Grant/Grant.png";
 import Red from "../../assets/Personagens/Red/Red.png";
 import Sybil from "../../assets/Personagens/Sybil/Sybil_2.png";
 
-import PenaCaidaEsquerda from "../../assets/Card1-Details/Pena-1.png";
-import PenaCaidaDireita from "../../assets/Card1-Details/Pena-2.png";
-import PenaCaidaRetaEsquerda from "../../assets/Card1-Details/Pena-3.png";
-import PenaCaidaRetaDireita from "../../assets/Card1-Details/Pena-4.png";
-
-//react-scroll
+//react-scroll -> Transição suave entre links internos
 import { Link } from "react-scroll";
 
+//Carrossel
 //react-multi-carousel
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -137,12 +133,18 @@ const LandingPage = () => {
                 <section className="banner">
                     <div className="container-img-card1">
                         <h1 className="maiusculo texto-branco bold">Transistor - Red the singer</h1>
-                        <img src={RedCard1} alt="Red" title="Red" loading="lazy"></img>
-                        <p className="">"Olha, o que quer que você<br></br>esteja pensando, me faça<br></br>um favor, não solte."</p>
+                        <img src={RedCard1} alt="Red" title="Red" loading="lazy" className="red"></img>
+                        <p className="texto-pequeno">"Olha, o que quer que você<br></br>esteja pensando, me faça<br></br>um favor, não solte."</p>
+                        <Link to="campeoes" smooth={true} duration={500}>
+                            <div>
+                                <i class="fas fa-mouse"></i>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </Link>
                     </div>
                 </section>
-                <section className="container personagens bg-dark">
-                    <Carousel minimumTouchDrag={0} responsive={responsive} draggable={false}>  
+                <section id="campeoes" className="container personagens bg-dark">
+                    <Carousel minimumTouchDrag={0} responsive={responsive} draggable={false}>
                         <Card img={Grant} nomePersonagem="Grant" descricao="A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder um número a ser contado em uma mão."/>
                         <Card img={Red} nomePersonagem="Red" descricao="Red, uma jovem cantora, entrou em posse do Transistor. Sendo a poderosa espada falante. O grupo Possessores quer tanto ela quanto o Transistor e está perseguindo implacavelmente a sua procura."/>
                         <Card img={Sybil} nomePersonagem="Sybil" descricao={`Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.`}/>
@@ -155,7 +157,7 @@ const LandingPage = () => {
                         <div className="container-formulario">
                             <div className="textos">
                                 <h1 className="texto-verde montserrat maiusculo">Formulário</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p className="texto-pequeno">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                             <form>
                                 <div className="dados">
