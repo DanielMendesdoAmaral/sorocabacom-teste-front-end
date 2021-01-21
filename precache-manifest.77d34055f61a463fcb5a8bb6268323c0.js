@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2a3fbbcc27469f2313d75f17f53914f8",
+    "revision": "5848c35dc62b7ff8ab7a65c8823f8d93",
     "url": "/sorocabacom-teste-front-end/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sorocabacom-teste-front-end/static/css/2.fc9b5189.chunk.css"
   },
   {
-    "revision": "c8ddf60bb193273440b3",
-    "url": "/sorocabacom-teste-front-end/static/css/main.cb8d491f.chunk.css"
+    "revision": "2a6c2acee5700ae8f1d0",
+    "url": "/sorocabacom-teste-front-end/static/css/main.83de6c2e.chunk.css"
   },
   {
     "revision": "c1895af6e1574b5da05d",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sorocabacom-teste-front-end/static/js/2.e420b52a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8ddf60bb193273440b3",
+    "revision": "2a6c2acee5700ae8f1d0",
     "url": "/sorocabacom-teste-front-end/static/js/main.1aa727aa.chunk.js"
   },
   {

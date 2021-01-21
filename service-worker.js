@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sorocabacom-teste-front-end/precache-manifest.65b04f284dce13cac0da50567ac17e0b.js"
+  "/sorocabacom-teste-front-end/precache-manifest.77d34055f61a463fcb5a8bb6268323c0.js"
 );
 
 self.addEventListener('message', (event) => {
