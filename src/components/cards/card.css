@@ -2,8 +2,9 @@
     width: 80%;
     max-width: 250px;
     height: 400px;
-    margin: 20px;
+    
     background-color: white;
+
     border-radius: 4%;
     margin: 100px auto;
 }
@@ -11,10 +12,13 @@
 .card .card-img {
     width: 90%;
     height: 70%;
-    margin: auto;
+
     background-color: var(--cinza);
+
+    margin: auto;
     border: solid 2px white;
     border-radius: 20%;
+
     position: relative;
     top: -50px;
 }
@@ -22,13 +26,18 @@
 .card .card-img img {
     height: 120%;
     width: 100%;
+
     display: block;
+
     margin: auto;
+    /*Responsável por adequar a imagem ao container.*/
+    margin-top: -23%;
+
     position: relative;
-    margin-top: -22%;
 }
 
 .card .container-texto {
     width: 80%;
+
     margin: auto;
 }

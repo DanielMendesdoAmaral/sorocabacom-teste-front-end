@@ -7,6 +7,7 @@
 * {
   padding: 0;
   margin: 0;
+  /*A fonte padrão é a Open Sans, pois é a mais utilizada no documento. O mesmo vale para a cor e a weight dela.*/
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,6 +23,7 @@ html {
   font-size: 62.5%;
 }
 
+/*Variáveis*/
 :root {
   --cinza: #363636;
   --verde: #63C7A9;
@@ -31,16 +33,20 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
+.texto-pequeno {
+  font-size: 1.225rem;
+}
+
+.maiusculo {
+  text-transform: uppercase;
+}
+
 .texto-branco {
   color: white;
 }
 
 .texto-verde {
   color: var(--verde);
-}
-
-.maiusculo {
-  text-transform: uppercase;
 }
 
 .bold {
@@ -63,8 +69,4 @@ input, button, textarea {
 
 .erro {
   color: red;
-}
-
-.texto-pequeno {
-  font-size: 1.225rem;
 }

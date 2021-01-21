@@ -1,32 +1,36 @@
 import React, { useState } from "react";
 
 //CSS
-import "./landingpage.css";
+    import "./landingpage.css";
 
 //Components
-import Card from "../../components/cards/card";
+    import Card from "../../components/cards/card";
 
 //Assets
-import Logo from "../../assets/Logo/Logo.png";
+    //Logo que fica no cabeçalho
+    import Logo from "../../assets/Logo/Logo.png";
 
-import RedCard1 from "../../assets/Card 1/Imagem card-1.png";
+    //Primeira imagem, a que fica no banner, logo abaixo do cabeçalho
+    import RedCard1 from "../../assets/Card 1/Imagem card-1.png";
 
-import Grant from "../../assets/Personagens/Grant/Grant.png";
-import Red from "../../assets/Personagens/Red/Red.png";
-import Sybil from "../../assets/Personagens/Sybil/Sybil_2.png";
+    //Primeiro personagem (primeiro card)
+    import Grant from "../../assets/Personagens/Grant/Grant.png";
+    //Segunda personagem (segundo card)
+    import Red from "../../assets/Personagens/Red/Red.png";
+    //Terceira personagem (terceiro e o resto dos cards, para verificar o carrossel)
+    import Sybil from "../../assets/Personagens/Sybil/Sybil_2.png";
 
-import PenaCaidaEsquerda from "../../assets/Card1-Details/Pena-1.png";
-import PenaCaidaDireita from "../../assets/Card1-Details/Pena-2.png";
+//Componentes
+    //react-scroll -> Transição suave entre links internos
+    import { Link } from "react-scroll";
 
-//react-scroll -> Transição suave entre links internos
-import { Link } from "react-scroll";
-
-//Carrossel
-//react-multi-carousel
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+    //Carrossel
+    //react-multi-carousel
+    import Carousel from 'react-multi-carousel';
+    import 'react-multi-carousel/lib/styles.css';
 
 const LandingPage = () => {
+    //Constante responsável por indicar ao carrossel os breakpoints e a quantidade de itens que ele deve carregar para cada um deles.
     const responsive = {
         desktop: {
             breakpoint: {
@@ -86,14 +90,17 @@ const LandingPage = () => {
         }
     }
 
+    //Estados relativos aos campos do formulário.
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
 
+    //Estados relativos aos erros dos campos do formulário.
     const [erroNome, setErroNome] = useState("");
     const [erroEmail, setErroEmail] = useState("");
     const [erroMsg, setErroMsg] = useState("");
 
+    //Se não tiver nenhum erro, ele pode ser chamado. Recebe um event, que no caso seria um botão, para inibir a ação do submit de recarregar a página. Limpa os campos e emite um alerta avisando ao usuário que a mensagem foi enviada com sucesso.
     const enviar = (event) => {
         event.preventDefault();
         setNome("");
@@ -102,6 +109,7 @@ const LandingPage = () => {
         alert("Mensagem enviada com sucesso! :)");
     }   
 
+    //Recebe um nome, tira os espaços desnecessários dele e emite o erro caso esse nome tenha menos de 2 caracteres. Caso contrário, apenas apaga a mensagem de erro.
     const validarNome = (nome) => {
         nome = nome.trim();
         if(nome.length<2)
@@ -110,6 +118,7 @@ const LandingPage = () => {
             setErroNome("");
     }
 
+    //Recebe um email, tira os espaços desnecessários dele e emite o erro caso esse email não contenha os caracteres "@" ou ".com". Se faltar por exemplo o "@", ele nem confere se o ".com" está lá: ele já emite o erro! Caso contrário, apenas apaga a mensagem de erro.
     const validarEmail = (email) => {
         email = email.trim();
         if(!email.includes("@")||!email.includes(".com"))
@@ -118,6 +127,7 @@ const LandingPage = () => {
             setErroEmail("");
     }
 
+    //Recebe uma mensagem, tira os espaços desnecessários dela e emite o erro caso essa mensagem tenha menos de 5 caracteres. Caso contrário, apenas apaga a mensagem de erro.
     const validarMsg = (msg) => {
         msg = msg.trim();
         if(msg.length<5)
@@ -132,12 +142,15 @@ const LandingPage = () => {
                 <img src={Logo} alt="SuperGiantGames" title="SuperGiantGames" loading="lazy"></img>
                 <h1 className="montserrat texto-branco">SuperGiantGames</h1>
             </header>
+
             <main className="bg-dark">
+
                 <section className="banner">
                     <div className="container-img-card1">
                         <h1 className="maiusculo texto-branco bold">Transistor - Red the singer</h1>
-                        <img src={RedCard1} alt="Red" title="Red" loading="lazy" className="red"></img>
+                        <img src={RedCard1} className="red" alt="Red" title="Red" loading="lazy"></img>
                         <p className="texto-pequeno">"Olha, o que quer que você<br></br>esteja pensando, me faça<br></br>um favor, não solte."</p>
+                        {/*Componente responsável pelas transições suaves entre os links internos. "to" -> Para onde o link aponta. "smooth" -> Habilita/desabilita a animação de scroll. "duration" -> Duração da transição (em ms).*/}
                         <Link to="campeoes" smooth={true} duration={500}>
                             <div>
                                 <i class="fas fa-mouse"></i>
@@ -146,8 +159,11 @@ const LandingPage = () => {
                         </Link>
                     </div>
                 </section>
+
                 <section id="campeoes" className="container personagens bg-dark">
+                    {/*O carrossel. "minimumTouchDrag" -> Distância necessária para arrastar para ir ao próximo slide. "responsive" -> Breakpoints e informações sobre eles. "draggable" -> Habilita/desabilita arrastar no carrossel no desktop breakpoint.*/}
                     <Carousel minimumTouchDrag={0} responsive={responsive} draggable={false}>
+                        {/*Os cards de cada personagem. "img" -> Caminho da imagem. "nomePersonagem" -> Nome do personagem daquele card, para acessibilidade. "descricao" -> Texto do card.*/}
                         <Card img={Grant} nomePersonagem="Grant" descricao="A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder um número a ser contado em uma mão."/>
                         <Card img={Red} nomePersonagem="Red" descricao="Red, uma jovem cantora, entrou em posse do Transistor. Sendo a poderosa espada falante. O grupo Possessores quer tanto ela quanto o Transistor e está perseguindo implacavelmente a sua procura."/>
                         <Card img={Sybil} nomePersonagem="Sybil" descricao={`Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.`}/>
@@ -155,6 +171,7 @@ const LandingPage = () => {
                         <Card img={Sybil} nomePersonagem="Sybil" descricao={`Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.`}/>
                     </Carousel>
                 </section>
+
                 <section className="gradient">
                     <div className="formulario">
                         <div className="container-formulario">
@@ -165,7 +182,11 @@ const LandingPage = () => {
                             <form>
                                 <div className="dados">
                                     <div>
+                                        {/*onChange -> Toda vez que o usuário alterar o valor do input, este valor será guardado no estado a que o campo se refere. 
+                                           onKeyUp -> Toda vez que o usuário digitar uma letra, o valor do input será validado.
+                                           Se houver alguma mensagem de erro, a borda do input fica vermelha. Caso contrário, volta à cor normal.*/}
                                         <input type="text" placeholder="Nome" required value={nome} onChange={event => setNome(event.target.value)} onKeyUp={event => validarNome(event.target.value)} style={{borderColor: erroNome!==""?"red":"#363636"}}></input>
+                                        {/*Mostra o erro, se existir.*/}
                                         <p className="erro">{erroNome}</p>
                                     </div>
                                     <div>
@@ -175,12 +196,15 @@ const LandingPage = () => {
                                 </div>
                                 <textarea placeholder="Mensagem" rows={5} required value={msg} style={{borderColor: erroMsg!==""?"red":"#363636"}} onChange={event => setMsg(event.target.value)} onKeyUp={event=>validarMsg(event.target.value)}></textarea>
                                 <p className="erro">{erroMsg}</p>
+                                {/*Se existir um erro se quer, ou se um ou mais campos não tiverem sido preenchidos corretamente, o botão é desativado e fica opaco.*/}
                                 <button onClick={event => erroMsg!==""||erroEmail!==""||erroNome!==""||nome.length<2||!email.includes("@")||!email.includes(".com")||msg.length<5?alert("Preencha os campos e/ou resolva os erros!"):enviar(event)} type={erroMsg===""||erroEmail===""||erroNome===""?"button":"submit"} className="texto-branco maiusculo" style={{opacity: erroMsg!==""||erroEmail!==""||erroNome!==""||nome.length<2||!email.includes("@")||!email.includes(".com")||msg.length<5? "0.5" : "1"}}>Enviar</button>
                             </form>
                         </div>
                     </div>
                 </section>
+
             </main>
+            
             <footer className="container">
                 <Link to="inicio" smooth={true} duration={500}><i className="fas fa-chevron-circle-up"></i></Link>
             </footer>

@@ -34,6 +34,7 @@ main section.banner {
     height: 80vh;
     min-height: 500px;
     max-height: 1000px;
+
     background: url(../../assets/Background/Background.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -47,10 +48,12 @@ main section.banner {
 main section.banner .container-img-card1 {
     width: auto;
     height: 100%;
+
     background: url("../../assets/Card 1/Background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+
     padding: 0 15px;
 
     display: flex;
@@ -61,18 +64,22 @@ main section.banner .container-img-card1 {
 main section.banner .container-img-card1 h1 {
     font-size: 1rem;
     overflow-wrap: break-word;
+
     padding: 10px 20px;
 }
 
 main section.banner .container-img-card1 img.red {
     height: calc(100vh - 15vh - 30vh);
+
     display: block;
+
     margin: auto;
 }
 
 main section.banner .container-img-card1 p {
     color: #F0F0F2;
     text-align: center;
+
     padding: 10px;
 }
 
@@ -80,6 +87,7 @@ main section.banner .container-img-card1 div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     text-align: center;
 
     cursor: pointer;
@@ -98,7 +106,7 @@ main section.banner .container-img-card1 div i.fa-chevron-down {
     color: white;
 }
 
-/*Cards personagens*/
+/*Sessão dos personagens*/
 
 .personagens {
     padding: 50px 0;
@@ -124,6 +132,7 @@ section.gradient {
     height: 50vh;
     min-height: 520px;
     max-height: 100px;
+    
     background: rgb(125,237,226);
     background: linear-gradient(90deg, rgba(125,237,226,1) 0%, rgba(88,183,144,1) 100%);
 }
@@ -132,17 +141,22 @@ section.gradient div.formulario {
     width: 80%;
     max-width: 600px;
     height: 110%;
+
     background-color: white;
+
     margin: auto;
     border-radius: 10px;
+
     display: flex;
     justify-content: center;
+
     position: relative;
     top: -25px;
 }
 
 section.gradient div.container-formulario {
     width: 80%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -157,7 +171,22 @@ section.gradient h1 {
 section.gradient div form {
     width: 70%;
     max-width: 550px;
+
     margin: auto;
+}
+
+section.gradient input, textarea {
+    border: solid 1px var(--cinza);
+
+    color: var(--cinza);
+}
+
+section.gradient div form .dados {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
 }
 
 section.gradient div form .dados input {
@@ -174,38 +203,35 @@ section.gradient div form textarea {
     width: 100%;
 }
 
-section.gradient input, textarea {
-    border: solid 1px var(--cinza);
-    color: var(--cinza);
-}
-
-section.gradient div form .dados {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
 section.gradient div form button {
-    margin: 20px 0;
     width: 40%;
     min-width: 130px;
+
     padding: 2px 0;
+    margin: 20px 0;
     border: none;
+
     background-color: var(--verde);
+
     cursor: pointer;
 }
 
+/*Media querie para o formulário, para telas menores que 598px (um tablet médio)*/
+
 @media screen and (max-width: 598px) {
-    section.gradient div form .dados div {
-        width: 100%;
-        margin-bottom: 20px;
-    }
     section.gradient div form .dados {
         margin-bottom: 0;
     }
+
+    section.gradient div form .dados div {
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
     section.gradient div form button {
         display: block;
+
         margin: 20px auto;
     }
 }
@@ -228,11 +254,14 @@ footer {
 footer i {
     color: white;
     font-size: 4rem;
+
     cursor: pointer;
+
     transition: 0.5s;
 }
 
 footer i:hover {
     transition: 0.25s;
+
     text-shadow: 0 0 4px white;
 }
