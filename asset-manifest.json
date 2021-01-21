@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sorocabacom-teste-front-end/static/css/main.cb8d491f.chunk.css",
-    "main.js": "/sorocabacom-teste-front-end/static/js/main.1aa727aa.chunk.js",
-    "main.js.map": "/sorocabacom-teste-front-end/static/js/main.1aa727aa.chunk.js.map",
+    "main.js": "/sorocabacom-teste-front-end/static/js/main.26c66472.chunk.js",
+    "main.js.map": "/sorocabacom-teste-front-end/static/js/main.26c66472.chunk.js.map",
     "runtime-main.js": "/sorocabacom-teste-front-end/static/js/runtime-main.4a15c81f.js",
     "runtime-main.js.map": "/sorocabacom-teste-front-end/static/js/runtime-main.4a15c81f.js.map",
     "static/css/2.fc9b5189.chunk.css": "/sorocabacom-teste-front-end/static/css/2.fc9b5189.chunk.css",
     "static/js/2.e420b52a.chunk.js": "/sorocabacom-teste-front-end/static/js/2.e420b52a.chunk.js",
     "static/js/2.e420b52a.chunk.js.map": "/sorocabacom-teste-front-end/static/js/2.e420b52a.chunk.js.map",
     "index.html": "/sorocabacom-teste-front-end/index.html",
-    "precache-manifest.65b04f284dce13cac0da50567ac17e0b.js": "/sorocabacom-teste-front-end/precache-manifest.65b04f284dce13cac0da50567ac17e0b.js",
+    "precache-manifest.d678e27a1de9e356ac6b6c8d85fed733.js": "/sorocabacom-teste-front-end/precache-manifest.d678e27a1de9e356ac6b6c8d85fed733.js",
     "service-worker.js": "/sorocabacom-teste-front-end/service-worker.js",
     "static/css/2.fc9b5189.chunk.css.map": "/sorocabacom-teste-front-end/static/css/2.fc9b5189.chunk.css.map",
     "static/css/main.cb8d491f.chunk.css.map": "/sorocabacom-teste-front-end/static/css/main.cb8d491f.chunk.css.map",
@@ -26,6 +26,6 @@
     "static/css/2.fc9b5189.chunk.css",
     "static/js/2.e420b52a.chunk.js",
     "static/css/main.cb8d491f.chunk.css",
-    "static/js/main.1aa727aa.chunk.js"
+    "static/js/main.26c66472.chunk.js"
   ]
 }
